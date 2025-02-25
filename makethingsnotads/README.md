@@ -1,6 +1,35 @@
 # Make Things Not Ads
 
-A landing page for "Make Things Not Ads", a social media marketing consultancy based in Richmond, Virginia.
+A modern landing page for a social media marketing consultancy specializing in AI-enhanced content creation.
+
+## Features
+
+- Interactive particles.js background in the hero section
+- Responsive design for all device sizes
+- AI Process Visualization showcasing the content creation workflow
+- Modern, clean UI with animations and hover effects
+
+## Technologies Used
+
+- HTML5
+- CSS3 (with animations and flexbox/grid layouts)
+- JavaScript
+- Particles.js for interactive background
+
+## Live Demo
+
+Visit the live site: [Make Things Not Ads](https://welovejeff.github.io/makethingsnotads/)
+
+## Development
+
+To run this project locally:
+
+1. Clone the repository
+2. Open index.html in your browser
+
+## Deployment
+
+This site is deployed using GitHub Pages from the gh-pages branch.
 
 ## Project Overview
 
@@ -9,14 +38,6 @@ This is a simple landing page built with HTML, CSS, and JavaScript. It showcases
 - Organic Social Media
 - Paid Social Media
 - AI Consulting
-
-## Features
-
-- Responsive design that works well on desktop and mobile devices
-- Modern, clean aesthetic with creative typography
-- Simple contact form for lead generation
-- Smooth scrolling and subtle animations
-- Case study showcase
 
 ## Project Structure
 
