@@ -114,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             if (targetElement) {
                 window.scrollTo({
-                    top: targetElement.offsetTop - 100, // Offset for the header
+                    top: targetElement.getBoundingClientRect().top + window.pageYOffset - 100, // Offset for the header
                     behavior: 'smooth'
                 });
             }
