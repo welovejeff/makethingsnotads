@@ -63,6 +63,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Form submission
     const contactForm = document.getElementById('contact-form');
+    // Creative Circus case study toggle
+    const circusToggle = document.getElementById("circus-toggle");
+    const circusDetails = document.getElementById("circus-details");
+    if (circusToggle && circusDetails) {
+        circusToggle.addEventListener("click", () => {
+            circusDetails.classList.toggle("show");
+            circusToggle.textContent = circusDetails.classList.contains("show") ? "Hide Results" : "View Results";
+        });
+    }
+
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
