@@ -1,0 +1,17 @@
+{
+  "name": "makethingsnotads",
+  "version": "1.0.0",
+  "description": "A modern landing page for a social media marketing consultancy specializing in AI-enhanced content creation.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "jest": "^29.6.1",
+    "jsdom": "^22.1.0"
+  }
+}
