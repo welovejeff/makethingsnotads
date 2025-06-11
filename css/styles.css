@@ -467,6 +467,10 @@ nav ul li a:hover:before {
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+.process-step:hover .process-icon {
+    color: var(--secondary-color);
+}
+
 .process-icon {
     font-size: 2rem;
     color: var(--primary-color);
