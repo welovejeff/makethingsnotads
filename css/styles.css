@@ -130,6 +130,54 @@ a:hover {
 .btn-primary:active {
     transform: translateY(-1px);
 }
+.btn-secondary {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    margin-top: 15px;
+}
+.btn-secondary:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: var(--primary-color);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+.btn-secondary:hover {
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow);
+}
+.btn-secondary:hover:after {
+    height: 100%;
+}
+.btn-secondary:active {
+    transform: translateY(-1px);
+}
+.case-study-details {
+    display: none;
+    margin-top: 15px;
+}
+.case-study-details.show {
+    display: block;
+    animation: fadeInUp 0.4s ease forwards;
+}
+
 
 /* Header & Navigation */
 header {
