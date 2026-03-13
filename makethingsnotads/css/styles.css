@@ -163,6 +163,10 @@ header .container {
     letter-spacing: 1px;
 }
 
+.logo-link {
+    text-decoration: none;
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -631,7 +635,9 @@ footer {
 
 .footer-content {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
     margin-bottom: 40px;
 }
 
@@ -645,12 +651,107 @@ footer {
     -webkit-text-fill-color: transparent;
 }
 
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
 .copyright {
     text-align: center;
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.6);
     padding-top: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Legal Pages */
+body.legal-page {
+    background: linear-gradient(180deg, #ffffff 0%, #f3f6ff 100%);
+}
+
+body.legal-page main {
+    padding-top: 140px;
+}
+
+.legal-hero {
+    padding: 0 0 30px;
+}
+
+.legal-body {
+    padding-top: 0;
+}
+
+.legal-shell {
+    width: 100%;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.eyebrow {
+    margin-bottom: 16px;
+    color: var(--secondary-color);
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+}
+
+.legal-intro {
+    max-width: 720px;
+    font-size: 1.1rem;
+}
+
+.legal-meta {
+    color: #6c7086;
+    font-weight: 500;
+}
+
+.legal-card {
+    background: white;
+    border-radius: 18px;
+    padding: 40px;
+    box-shadow: var(--box-shadow);
+}
+
+.legal-section + .legal-section {
+    margin-top: 36px;
+}
+
+.legal-section h2 {
+    display: block;
+    margin-bottom: 1.25rem;
+    font-size: 1.8rem;
+}
+
+.legal-section ul {
+    padding-left: 20px;
+    margin-bottom: 1rem;
+}
+
+.legal-section li {
+    margin-bottom: 0.75rem;
+}
+
+.legal-note {
+    margin-top: 36px;
+    padding: 22px 24px;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 14px;
+    background: linear-gradient(135deg, rgba(80, 99, 240, 0.08), rgba(255, 77, 90, 0.08));
 }
 
 /* Responsive Styles */
@@ -681,13 +782,25 @@ footer {
         text-align: center;
         gap: 20px;
     }
-    
+
+    .footer-links {
+        justify-content: center;
+    }
+
     .process-flow {
         flex-direction: column;
     }
-    
+
     .process-arrow {
         transform: rotate(90deg);
+    }
+
+    body.legal-page main {
+        padding-top: 110px;
+    }
+
+    .legal-card {
+        padding: 30px 24px;
     }
 }
 
