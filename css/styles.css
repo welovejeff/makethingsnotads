@@ -802,6 +802,208 @@ body.legal-page main {
     background: linear-gradient(135deg, rgba(80, 99, 240, 0.08), rgba(255, 77, 90, 0.08));
 }
 
+/* Hamburger button */
+.nav-hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    min-height: 44px;
+    min-width: 44px;
+}
+
+.nav-hamburger span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background-color: var(--dark-color);
+    border-radius: 2px;
+    transition: var(--transition);
+    transform-origin: center;
+}
+
+.nav-hamburger.is-open span:nth-child(1) {
+    transform: translateY(7px) rotate(45deg);
+}
+
+.nav-hamburger.is-open span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-hamburger.is-open span:nth-child(3) {
+    transform: translateY(-7px) rotate(-45deg);
+}
+
+/* Hero CTAs */
+.hero-ctas {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.btn-outline-hero {
+    display: inline-block;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition: var(--transition);
+}
+
+.btn-outline-hero:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow);
+}
+
+/* Contact simple */
+.contact-simple {
+    max-width: 600px;
+    margin-top: 40px;
+}
+
+.contact-intro {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.contact-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.btn-outline {
+    display: inline-block;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    padding: 12px 30px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 0.85rem;
+    transition: var(--transition);
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: var(--box-shadow);
+}
+
+/* Case study stats */
+.case-study-summary {
+    font-style: italic;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.case-study-stats {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.case-study-stats li {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+.case-study-stats li:last-child {
+    border-bottom: none;
+}
+
+/* Founder Section */
+#founder {
+    background-color: white;
+}
+
+.founder-content {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.founder-photo {
+    flex-shrink: 0;
+}
+
+.founder-photo-placeholder {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(80, 99, 240, 0.1), rgba(255, 77, 90, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: var(--primary-color);
+    border: 3px solid rgba(80, 99, 240, 0.2);
+}
+
+.founder-bio h3 {
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.founder-linkedin {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+.founder-linkedin i {
+    margin-right: 6px;
+}
+
+/* Pre-footer CTA */
+#pre-footer-cta {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    text-align: center;
+    padding: 80px 0;
+}
+
+.pre-footer-cta-content h2 {
+    color: white;
+    font-size: 2.2rem;
+    margin-bottom: 16px;
+}
+
+.pre-footer-cta-content h2:after {
+    display: none;
+}
+
+.pre-footer-cta-content p {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.9);
+    margin-bottom: 30px;
+}
+
+.pre-footer-cta-content .btn-primary {
+    background-color: white;
+    color: var(--primary-color);
+    border: 2px solid white;
+}
+
+.pre-footer-cta-content .btn-primary:hover {
+    background-color: transparent;
+    color: white;
+}
+
 /* Responsive Styles */
 @media (max-width: 768px) {
     h1 {
@@ -816,8 +1018,50 @@ body.legal-page main {
         padding: 15px 0;
     }
     
+    .nav-hamburger {
+        display: flex;
+    }
+
     nav ul {
-        display: none; /* Will need JavaScript for mobile menu toggle */
+        display: none;
+    }
+
+    nav.nav-open ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        padding: 16px 0;
+        z-index: 999;
+    }
+
+    nav.nav-open ul li {
+        margin: 0;
+    }
+
+    nav.nav-open ul li a {
+        display: block;
+        padding: 14px 30px;
+        min-height: 44px;
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .founder-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-actions {
+        flex-direction: column;
+        align-items: flex-start;
     }
     
     .case-study-content,

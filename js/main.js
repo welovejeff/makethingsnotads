@@ -1,5 +1,47 @@
 // Wait for the DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
+    // Copyright year
+    const yearEl = document.getElementById('copyright-year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+    // Mobile hamburger nav
+    const hamburger = document.getElementById('nav-hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', () => {
+            const isOpen = navMenu.classList.toggle('nav-open');
+            hamburger.classList.toggle('is-open', isOpen);
+            hamburger.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Close on nav link click
+        navMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('nav-open');
+                hamburger.classList.remove('is-open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            });
+        });
+
+        // Close on outside click
+        document.addEventListener('click', (e) => {
+            if (!hamburger.contains(e.target) && !navMenu.contains(e.target)) {
+                navMenu.classList.remove('nav-open');
+                hamburger.classList.remove('is-open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                navMenu.classList.remove('nav-open');
+                hamburger.classList.remove('is-open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
+        });
+    }
+
     // Scroll Animation
     const animateSections = () => {
         const sections = document.querySelectorAll('section');
@@ -61,8 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
         highlightSteps();
     }
     
-    // Form submission
-    const contactForm = document.getElementById('contact-form');
     // Creative Circus case study toggle
     const circusToggle = document.getElementById("circus-toggle");
     const circusDetails = document.getElementById("circus-details");
@@ -73,47 +113,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Basic validation
-            if (!name || !email || !message) {
-                alert('Please fill in all fields');
-                return;
-            }
-            
-            // For this demo, just show a success message
-            // In a real implementation, you would send this data to a server
-            alert('Thank you for your message! We will get back to you soon.');
-            contactForm.reset();
-            
-            // You would normally use fetch() here to submit to an API endpoint
-            // Example:
-            // fetch('your-endpoint', {
-            //     method: 'POST',
-            //     headers: {
-            //         'Content-Type': 'application/json',
-            //     },
-            //     body: JSON.stringify({ name, email, message }),
-            // })
-            // .then(response => response.json())
-            // .then(data => {
-            //     console.log('Success:', data);
-            //     contactForm.reset();
-            // })
-            // .catch(error => {
-            //     console.error('Error:', error);
-            // });
-        });
-    }
-    
     // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function(e) {
