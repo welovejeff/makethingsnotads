@@ -14,21 +14,21 @@
       gtag('config', 'G-5Y6ZW173Z4');
     </script>
     
-    <meta name="description" content="Make Things Not Ads - Social Media Marketing Consultancy specializing in organic & paid social media and AI consulting based in Richmond, Virginia">
+    <meta name="description" content="Richmond, VA marketing agency using AI to run paid and organic social campaigns that drive real leads. See our work.">
     <title>Make Things Not Ads | Social Media & AI Marketing Consultancy</title>
     
     <!-- Social Media Meta Tags -->
     <meta property="og:title" content="Make Things Not Ads | AI-Powered Social Media Marketing">
     <meta property="og:description" content="A cutting-edge social media marketing consultancy leveraging AI to create authentic content that connects, engages, and converts.">
-    <meta property="og:image" content="https://makethingsnotads.com/assets/images/og-image.jpg">
+    <meta property="og:image" content="https://makethingsnotads.com/assets/images/og-image.png">
     <meta property="og:url" content="https://makethingsnotads.com">
     <meta property="og:type" content="website">
-    
+
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Make Things Not Ads | AI-Powered Social Media Marketing">
     <meta name="twitter:description" content="A cutting-edge social media marketing consultancy leveraging AI to create authentic content that connects, engages, and converts.">
-    <meta name="twitter:image" content="https://makethingsnotads.com/assets/images/twitter-card.jpg">
+    <meta name="twitter:image" content="https://makethingsnotads.com/assets/images/og-image.png">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -78,6 +78,9 @@
     }
     </script>
     
+    <link rel="icon" href="/assets/images/favicon.svg" type="image/svg+xml">
+    <link rel="icon" href="/assets/images/favicon.ico" sizes="any">
+    <link rel="apple-touch-icon" href="/assets/images/apple-touch-icon.png">
     <link rel="stylesheet" href="css/styles.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,7 +93,12 @@
     <header>
         <div class="container">
             <div class="logo">Make Things Not Ads</div>
-            <nav>
+            <button class="nav-hamburger" id="nav-hamburger" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nav-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav id="nav-menu">
                 <ul>
                     <li><a href="#about">About</a></li>
                     <li><a href="#ai-ethics">AI Ethics</a></li>
@@ -108,7 +116,10 @@
         <div class="container">
             <h1>Marketing with Intelligence</h1>
             <p class="lead">We leverage the power of AI to create authentic social media content that connects, engages, and converts.</p>
-            <a href="#contact" class="btn-primary">Get in Touch</a>
+            <div class="hero-ctas">
+                <a href="#contact" class="btn-primary">Get in Touch</a>
+                <a href="https://cal.com/makethingsnotads" class="btn-outline-hero" target="_blank" rel="noopener">Book a Free 30-Min Call</a>
+            </div>
         </div>
     </section>
 
@@ -243,9 +254,16 @@
                 <div class="case-study-content">
                     <div class="case-study-text">
                         <p>As our very first client, <strong>The Creative Circus</strong> trusted us to build their entire social strategy from the ground up. We blended organic and paid campaigns using our AI-enhanced workflow to maximize reach and efficiency.</p>
+                        <p class="case-study-summary">In 3 months, we grew The Creative Circus qualified student leads by 75% at under $20 per conversion.</p>
                         <button id="circus-toggle" class="btn-secondary">View Results</button>
                         <div id="circus-details" class="case-study-details">
-                        <p>Within three months, campaigns generated nearly <strong>one million impressions</strong> while maintaining a cost per conversion of under <strong>$20</strong>. Engagement jumped by 150% and qualified leads grew 75%, showcasing the power of pairing creativity with data-driven insights.</p>
+                            <ul class="case-study-stats">
+                                <li><strong>75% increase in qualified leads</strong></li>
+                                <li><strong>Under $20 cost per conversion</strong></li>
+                                <li><strong>150% engagement increase</strong></li>
+                                <li>~1M impressions (supporting reach)</li>
+                            </ul>
+                        </div>
                     </div>
                     <div class="case-study-image">
                         <!-- Placeholder for case study image -->
@@ -256,32 +274,45 @@
         </div>
     </section>
 
+    <section id="founder">
+        <div class="container">
+            <h2>Who's Behind This</h2>
+            <div class="founder-content">
+                <div class="founder-photo">
+                    <div class="founder-photo-placeholder"><i class="fas fa-user"></i></div>
+                </div>
+                <div class="founder-bio">
+                    <h3>[Name], Founder</h3>
+                    <p>[X] years in digital marketing and social media strategy. Based in Richmond, VA, with a focus on helping small and mid-size businesses compete with smarter, AI-assisted campaigns that actually convert.</p>
+                    <p>Before starting Make Things Not Ads, [he/she/they] worked with brands across [industries], building campaigns that prioritized authentic connection over vanity metrics.</p>
+                    <a href="https://linkedin.com/company/makethingsnotads" class="btn-outline founder-linkedin" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> Connect on LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pre-footer-cta">
+        <div class="container">
+            <div class="pre-footer-cta-content">
+                <h2>Ready to See Real Results?</h2>
+                <p>Let's talk about your goals. No pressure, just a 30-minute conversation about what's possible.</p>
+                <a href="https://cal.com/makethingsnotads" class="btn-primary" target="_blank" rel="noopener">Book a Free 30-Min Call</a>
+            </div>
+        </div>
+    </section>
+
     <section id="contact">
         <div class="container">
             <h2>Get in Touch</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <p>Ready to transform your social media presence? Let's talk about how we can help your business thrive in the digital landscape.</p>
-                    <div class="contact-details">
-                        <p><i class="fas fa-map-marker-alt"></i> Richmond, Virginia</p>
-                        <p><i class="fas fa-envelope"></i> hello@makethingsnotads.com</p>
-                    </div>
+            <div class="contact-simple">
+                <p class="contact-intro">Ready to transform your social media presence? Let's talk about how we can help your business thrive in the digital landscape.</p>
+                <div class="contact-actions">
+                    <a href="https://cal.com/makethingsnotads" class="btn-primary" target="_blank" rel="noopener">Book a Free 30-Min Call</a>
+                    <a href="mailto:hello@makethingsnotads.com" class="btn-outline">hello@makethingsnotads.com</a>
                 </div>
-                <form id="contact-form" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn-primary">Send Message</button>
-                </form>
+                <div class="contact-details">
+                    <p><i class="fas fa-map-marker-alt"></i> Richmond, Virginia</p>
+                </div>
             </div>
         </div>
     </section>
@@ -296,7 +327,7 @@
                 </div>
             </div>
             <div class="copyright">
-                &copy; 2025 Make Things Not Ads. All rights reserved.
+                &copy; <span id="copyright-year"></span> Make Things Not Ads. All rights reserved.
             </div>
         </div>
     </footer>
